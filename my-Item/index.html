@@ -9,13 +9,31 @@
       href="https://cdn.jsdelivr.net/npm/reset-css@4.0.1/reset.min.css"
     />
     <link rel="stylesheet" href="./css/main.css" />
+    <script src="./js/app.js" defer></script>
   </head>
   <body>
     <div id="outer">
+      <div class="createNewPost none">
+        <h2 class="modalHead">새 글 작성</h2>
+        <div class="titleWrap">
+          <input type="text" class="title" placeholder="제목을 입력해 주세요.">
+        </div>
+        <div class="modalWrap">
+          <input type="file" class="modalContents file"></input>
+          <input type="text" class="modalContents" placeholder="게시할 내용을 남겨주세요.">
+        </div>
+        <div class="modalButtonWrap">
+          <button class="modalButton cancle">취소</button>
+          <button class="modalButton clear">완료</button>
+        </div>
+      </div>
       <div class="top"></div>
       <h1>
         <span>MY ITEMS</span>
-        <i class="far fa-bell"></i>
+        <div class="side">
+          <i class="far fa-bell"></i>
+          <button class="add">글 작성하기</button>
+        </div>
       </h1>
       <nav>
         <ul class="nav">
@@ -64,27 +82,27 @@
         <li class="filters">시티보이</li>
         <li class="filters">원마일웨어</li>
       </ul>
+      
       <ul id="imgs">
+        <li class="post"><i class="far fa-images"></i></li>
       </ul>
       <footer id="footer">
-        <ul>
-          <li class="footerMenu">
-            <i class="fas fa-home"></i>
-            <span>홈</span>
-          </li>
-          <li class="footerMenu">
-            <i class="fas fa-search"></i>
-            <span>검색</span>
-          </li>
-          <li class="footerMenu">
-            <i class="far fa-bookmark"></i>
-            <span>북마크</span>
-          </li>
-          <li class="footerMenu">
-            <i class="far fa-user"></i>
-            <span>MY</span>
-          </li>
-        </ul>
+        <div class="footerMenu">
+          <i class="fas fa-home"></i>
+          <span>홈</span>
+        </div>
+        <div class="footerMenu">
+          <i class="fas fa-search"></i>
+          <span>검색</span>
+        </div>
+        <div class="footerMenu">
+          <i class="far fa-bookmark"></i>
+          <span>북마크</span>
+        </div>
+        <div class="footerMenu">
+          <i class="far fa-user"></i>
+          <span>MY</span>
+        </div>
       </footer>
     </div>
   </body>
