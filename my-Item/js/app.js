@@ -6,9 +6,7 @@ const $post = document.querySelector(".post");
 const $createNewPost = document.querySelector(".createNewPost");
 const $cancle = document.querySelector('.cancle');
 const $clear = document.querySelector('.clear')
-
-const $imgs = document.getElementById('imgs')
-
+const $newPost = document.querySelector('.imgs')
 
 
 
@@ -26,19 +24,30 @@ function cancle() {
   $body.classList.toggle('modal')
 }
 
-// 사진 추가되는 함수
+
+
+// 게시글 추가
 function createNew() {
-  const $post = document.createElement('li')
-  $post.classList.add('post')
-  $post.innerHTML = '<li class="post"><i class="far fa-images"></i></li>'
-  $imgs.appendChild($post)
+
+  // 새 자식
+  let element = $newPost.createElement('li');
+  element.classList.add('post')
+  const $newPostText = document.querySelector('.modalContents')
+  element.textContent = $newPostText;
+  console.log(element)
+
+  cancle();
 }
 
 
 
 
 
+
+
+
 // ============== 함수 바인딩 영역 ================//
-$addPost.addEventListener('click', addNewPost);
-$cancle.addEventListener('click', cancle)
+
 $clear.addEventListener('click', createNew)
+$cancle.addEventListener('click', cancle)
+$addPost.addEventListener('click', addNewPost)
